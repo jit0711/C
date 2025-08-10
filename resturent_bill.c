@@ -1,5 +1,5 @@
+//JIT
 #include <stdio.h>
-
 int main()
 {
     int codes[] = {01, 02, 03, 04, 05}; // Menu Items
