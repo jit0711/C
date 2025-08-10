@@ -1,6 +1,7 @@
 
 //JIT
 #include <stdio.h>
+#include<conio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -111,11 +112,11 @@ int main()
     int Bal = 10000, pin = 9921, pinx, choice, attemp = 0;
     while (attemp < 3)
     {
-        printf("Enter your 4 digit pin Pin:\n");
+        printf("\nEnter your 4 digit pin Pin:\n");
         scanf("%d", &pinx);
         if (pinx < 1000 || pinx > 9999 || pinx != pin)
         {
-            printf("!!!!Wrong/Invalid pin entered!!!!!\n Access Denied");
+            printf("!!!!Wrong/Invalid pin entered!!!!!\n\tAccess Denied");
             printf("\n\tPlease Try again...");
             attemp++;
             printf("\nAttempt remain: %d", 3 - attemp);
@@ -124,7 +125,9 @@ int main()
                 printf("\nAttempt Exceed!! Your card has been blocked.Contact your branch");
 
                 printf("\n===========================\n");
-                exit(0);
+                printf("\nPress any key to exit");
+                getch();
+                exit(0);        
             }
         }
         else
